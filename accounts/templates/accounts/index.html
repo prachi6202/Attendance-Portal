@@ -6,7 +6,9 @@
     <h1>Django Level Five</h1>
     {% if user.is_authenticated %}
         <h2>Welcome {{ user.username }}!</h2><br>
-        <p>{{ profile.user.specialization }}</p>
+      <p>{{ roll }}</p>
+        <p>{{course }}</p>
+
     {% else %}
         <h2>Welcome to the site!</h2>
     {% endif %}

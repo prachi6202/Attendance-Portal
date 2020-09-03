@@ -1,15 +1,21 @@
 from django.shortcuts import render
 from .forms import UserForm,UserProfileInfoForm
-
+from .models import *
 # Extra Imports for the Login and Logout Capabilities
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
-
 # Create your views here.
 def index(request):
-    return render(request,'accounts/index.html')
+    items = UserProfileInfo.objects.all()
+    context = {
+        'roll': items[1].rollnumber,
+        'course':items[1].specialization,
+    }
+    print(context)
+    return render(request, 'accounts/index.html',context)
+
 
 @login_required
 def special(request):

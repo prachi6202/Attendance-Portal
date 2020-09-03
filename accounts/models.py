@@ -22,4 +22,4 @@ class UserProfileInfo(models.Model):
 #
     def __str__(self):
         # Built-in attribute of django.contrib.auth.models.User !
-        return self.rollnumber+"  "+ self.user.username 
+        return self.user.username
