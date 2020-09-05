@@ -2,18 +2,19 @@
 {% block body_block %}
 
 <div class="container">
-  <div class="jumbotron"><br><br>
+  <div class="jumbotron">
+    <br><br>
     <h1>Django Level Five</h1>
-    <!-- {% if user.is_authenticated %}
+    {% if user.is_authenticated %}
         <h2>Welcome {{ user.username }}!</h2><br>
       <p>{{ roll }}</p>
         <p>{{ course }}</p>
 
-        <button class="btn btn-secondary" type="submit" name="button"><a href="https://meet.google.com/eqt-nxmj-ove">Join Now</a></button> -->
+        <button class="btn btn-secondary" type="submit" name="button"><a href="https://meet.google.com/eqt-nxmj-ove">Join Now</a></button>
 
-    <!-- {% else %} -->
+    {% else %}
         <h2>Welcome to the site!</h2>
-    <!-- {% endif %} -->
+    {% endif %}
   </div>
 </div>
 
