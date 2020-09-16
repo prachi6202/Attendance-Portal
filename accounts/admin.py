@@ -1,11 +1,11 @@
 from django.contrib import admin
-from .models import User, UserProfileInfo
+from .models import User, UserProfileInfo,teacher_timetable
 
 # Register your models here.
 
 class UserProfileInfoAdmin(admin.ModelAdmin):
 
-    fields=['rollnumber','specialization']
+    fields=['rollnumber','specialization','class_grp']
 
     search_fields=['rollnumber','specialization']
 
@@ -16,4 +16,7 @@ class UserProfileInfoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(UserProfileInfo,UserProfileInfoAdmin)
-# admin.site.register(UserProfileInfoForm)
+admin.site.register(teacher_timetable)
+
+from .models import student_tymtable
+admin.site.register(student_tymtable)
