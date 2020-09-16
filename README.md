@@ -1,10 +1,11 @@
 # Attendance-Portal
-This website will provide the easy access to the students for joining the google meet classes and provides a platform for teachers to make their timetable and generate the attendance report automatically.
+
+This website will provides the platform to the students for joining the online classes through google meet and also provides a platform for teachers to make their time table and will generate the attendance report automatically by some clicks.
 
 
 # Brief Description: 
 
-This project comprises of two things: 
+This project comprises of two things:
 A. Time table for efficient use  
 B. Student's attendance analysis that will resolve problem and give the visual insights and downloadable file that can be shared. 
 
