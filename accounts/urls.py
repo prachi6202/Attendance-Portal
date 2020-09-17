@@ -15,5 +15,6 @@ urlpatterns=[
     path('tymtable/',views.tymtable,name='tymtable'),
     path('about/',views.about,name='about'),
     path('user_login/',views.user_login,name='user_login'),
+   # path('login/',views.login,name='login'),
 ]
 

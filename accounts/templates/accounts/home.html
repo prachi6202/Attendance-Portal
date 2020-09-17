@@ -1,6 +1,5 @@
-{% extends "accounts/base.html" %}
-{% block body_block %}
-
+{%load static%}
+{% include 'accounts/base.html'%}
 <div class="container">
   <div class="jumbotron">
     <br><br>
@@ -25,6 +24,7 @@
                     <h2 class="text-center">
                         Timetable
                     </h2>
+
 
                 </div>
                 <div id="no-more-tables">
@@ -60,21 +60,36 @@
 
 
                                 <tr>
-                                    <th> {{i.day}}     </th>
-                                    <th> {{i.First_lech}} {{i.First_lech_teacher}} </th><th>   </th>
-                                    <th> {{i.sec_lech}} {{i.sec_lech_teacher}}  </th><th>   </th>
+                                    <th> {{i.day}}</th>
+                                    {% for j in a%}
+                                    <th><a href="{{j.First_link}}" >{{i.First_lech}} {{i.First_lech_teacher}}</a> </th><th>   </th>
+                                    {% endfor %}
+                                    {% for k in b %}
+                                    <th> <a href="{{k.sec_link}}" >{{i.sec_lech}} {{i.sec_lech_teacher}} </a> </th><th>   </th>
+                                    {%endfor%}
+                                    <th>   </th><th>
+                                    {% for x in c%}
+                                    <th> <a href="{{x.third_link}}" >{{i.third_lech}} {{i.third_lech_teacher}} </a></th><th>   </th>
+                                    {% endfor %}
+                                    {% for y in d %}
+                                    <th><a href="{{y.fourth_link}}" > {{i.fourth_lech}}{{i.fourth_lech_teacher}}</a> </th><th>   </th>
+                                    {% endfor%}
                                     <th>   </th><th>   </th>
-                                    <th> {{i.third_lech}} {{i.third_lech_teacher}} </th><th>   </th>
-                                    <th> {{i.fourth_lech}}{{i.fourth_lech_teacher}} </th><th>   </th>
-                                    <th>   </th><th>   </th>
-                                    <th> {{i.fifth_lech}} {{i.fifth_lech_teacher}}    </th><th>   </th>
-                                    <th> {{i.sixth_lech}} {{i.sixth_lech_teacher}}    </th><th>   </th>
-                                    <th> {{i.sev_lech}} {{i.sev_lech_teacher}}      </th><th>   </th>
+                                    {% for s in e%}
+                                    <th><a href="{{s.fifth_link}}" > {{i.fifth_lech}} {{i.fifth_lech_teacher}}  </a>  </th><th>   </th>
+                                    {% endfor %}
+                                    {% for p in f %}
+                                    <th> <a href="{{p.sixth_link}}" >{{i.sixth_lech}} {{i.sixth_lech_teacher}}  </a>  </th><th>   </th>
+                                    {%endfor%}
+                                    {% for h in g%}
+                                    <th> <a href="{{g.sev_link}}" >{{i.sev_lech}} {{i.sev_lech_teacher}}   </a>   </th><th>   </th>
+                                    {% endfor %}
                                 </tr>
 
                                 <tr> </tr>
 
                                 {% endfor %}
+
                             </thead>
                         </table>
                      </div>
@@ -84,4 +99,3 @@
     </div>
 
 
-{% endblock %}

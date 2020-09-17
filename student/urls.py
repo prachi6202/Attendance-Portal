@@ -26,5 +26,6 @@ urlpatterns = [
     path('tymtable/', views.tymtable, name='tymtable'),
     path('special/', views.special, name='special'),
     path('logout/', views.user_logout, name='logout'),
+    path('index/',views.index,name='index')
 
 ]

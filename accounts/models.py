@@ -45,7 +45,10 @@ class student_tymtable(models.Model):
     sev_lech_teacher = models.CharField(max_length=50, null=True,blank=True)
 
     def __str__(self):
-        return str(self.specialization)
+        return '{} {}'.format(str(self.specialization),str(self.day),str(self.First_lech_teacher),
+                              str(self.sec_lech_teacher),str(self.third_lech_teacher),str(self.fourth_lech_teacher),
+                              str(self.fifth_lech_teacher),str(self.sixth_lech_teacher),str(self.sev_lech_teacher))
+
 
 
 

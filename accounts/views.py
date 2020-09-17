@@ -14,24 +14,49 @@ def home(request):
     user = request.user
     # if user:
     x = int(user.id)-18
-
+    all_teacher=[]
+    a=[]
+    b=[]
+    c=[]
+    d=[]
+    e=[]
+    f=[]
+    g=[]
+   # table=[]
+    #print(type(table))
     table = student_tymtable.objects.filter(specialization=request.user.userprofileinfo.specialization,class_grp=request.user.userprofileinfo.class_grp)
-    first_link=teacher_timetable.objects.filter(name=student_tymtable.First_lech_teacher)
-    print(first_link)
-    #catprods =.objects.values('category')
-    #cats = {item['category'] for item in catprods}
-    #for cat in cats:
-     #   prod = Product.objects.filter(category=cat)
+    for t in table:
+        t1=teacher_timetable.objects.filter(name=t.First_lech_teacher,day=t.day)
+        a.append(t1)
+        t2=teacher_timetable.objects.filter(name=t.sec_lech_teacher,day=t.day)
+        b.append(t2)
+        t3 = teacher_timetable.objects.filter(name=t.third_lech_teacher,day=t.day)
+        c.append(t3)
+        t4 = teacher_timetable.objects.filter(name=t.fourth_lech_teacher,day=t.day)
+        d.append(t4)
+        t5 = teacher_timetable.objects.filter(name=t.fifth_lech_teacher,day=t.day)
+        e.append(t5)
+        t6 = teacher_timetable.objects.filter(name=t.sixth_lech_teacher,day=t.day)
+        f.append(t6)
+        t7 = teacher_timetable.objects.filter(name=t.sev_lech_teacher,day=t.day)
+        g.append(t7)
+
+
     context = {
         'roll': items[x].rollnumber,
         'course': items[x].specialization,
         'table':table,
-        'first_link':first_link,
+        'a':a,
+        'b':b,
+        'c':c,
+        'd':d,
+        'e':e,
+        'f':f,
+        'g':g,
+
     }
-    print(context)
-    print(items)
-    print(items[1],items[2],items[3])
-    print(table)
+
+
     return render(request, 'accounts/home.html',context)
 
 def index(request):
@@ -108,6 +133,7 @@ def user_login(request):
 
     else:
         return render(request, 'accounts/login.html', {})
+
 
 def tymtable(request):
     all_teacher=teacher_timetable.objects.filter(user=request.user)

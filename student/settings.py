@@ -143,4 +143,4 @@ MEDIA_URL = '/media/'
 
 # login
 LOGIN_REDIRECT_URL = '/info/'
-LOGOUT_REDIRECT_URL = '/accounts/user_login/'
+LOGOUT_REDIRECT_URL = '/accounts/index/'
