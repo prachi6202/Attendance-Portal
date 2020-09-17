@@ -28,7 +28,10 @@ SECRET_KEY = '$e#)#xt!iq6g-rp&02zgr#^1%*rdahp-q#7o_)wv@=g=_924bl'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+if DEBUG:
+    EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' #during devlopment only
+EMAIL_HOST='localhost'
+EMAIL_PORT=25
 
 # Application definition
 
@@ -143,4 +146,4 @@ MEDIA_URL = '/media/'
 
 # login
 LOGIN_REDIRECT_URL = '/info/'
-LOGOUT_REDIRECT_URL = '/accounts/index/'
+LOGOUT_REDIRECT_URL = '/index/'

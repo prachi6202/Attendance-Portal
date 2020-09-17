@@ -2,13 +2,13 @@ from django.shortcuts import render
 from .forms import UserForm,UserProfileInfoForm,teacher_timetableform
 from .models import *
 # Extra Imports for the Login and Logout Capabilities
-from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth import authenticate, login as django_login ,logout as django_logout
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from .models import student_tymtable,teacher_timetable
 from django.contrib.auth.decorators import login_required
 # Create your views here.
-
+@login_required
 def home(request):
     items = UserProfileInfo.objects.all()
     user = request.user
@@ -70,7 +70,7 @@ def special(request):
 
 @login_required
 def user_logout(request):
-    logout(request)
+    django_logout(request)
     return HttpResponseRedirect(reverse('index'))
 
 def register(request):
@@ -116,7 +116,7 @@ def user_login(request):
 
         user = authenticate(username=username, password=password)
         if user:
-            login(request, user)
+            django_login(request, user)
             if user.is_active:
                 if user.is_staff:
                     return HttpResponseRedirect(reverse('tymtable'))
