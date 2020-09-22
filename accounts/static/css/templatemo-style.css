@@ -1,9 +1,5 @@
 /*
 
-Elegance Template
-
-https://templatemo.com/tm-528-elegance
-
 ==================================================
 CSS SITEMAP >>>>
 
@@ -35,10 +31,14 @@ body {
 }
 body {
   font: 16px/1.6 'Raleway', Arial, Helvetica, sans-serif;
-  color: navy;
+  color: white;
   text-align:center;
-  background: white;
+  background-image: linear-gradient(to right top, #000000, #270b11, #460914, #640210, #800000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 img {
   border: 0;
   max-width: 100%;
@@ -139,16 +139,17 @@ video {
 #video:after {
   content: '';
   opacity: 0.75;
-  background: #4096ee; /* Old browsers */
-  background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #4096ee 0%,#39ced6 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  min-height: 110vh;
+  background-image: linear-gradient(to right top, #000000, #270b11, #460914, #640210, #800000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position:fixed;
   left:0;
   top:0;
   right:0;
   bottom: 0;
+
 }
 .wrapper-background-dark:after {
   background: #222;
@@ -223,10 +224,11 @@ video {
   flex: 1 0 auto;
 }
 .preloader {
-  background: -moz-linear-gradient(top, #4096ee 0%, #39ced6 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #4096ee 0%,#39ced6 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #4096ee 0%,#39ced6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4096ee', endColorstr='#39ced6',GradientType=0 ); /* IE6-9 */
+  min-height: 110vh;
+  background-image: linear-gradient(to right top, #000000, #270b11, #460914, #640210, #800000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 100%;
   left: 0;
   position: fixed;
@@ -450,6 +452,128 @@ a#logo {
   opacity: 1;
 }
 
+a.main-stroked-button {
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 11px 25px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-stroked-button:hover {
+  background-color: #fff;
+  color: maroon;
+}
+
+a.main-filled-button {
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 13px 25px;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: maroon;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-filled-button:hover {
+  color: #fff;
+  background-color: maroon;
+}
+
+a.main-button-icon {
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 13px 25px;
+  background-color: #5fb759;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+a.main-button-icon i {
+  margin-left: 5px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a.main-button-icon:hover i {
+  padding-left: 5px;
+}
+
+button.main-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 10px 25px;
+  background-color: #fff;
+  text-transform: uppercase;
+  color: maroon;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button.main-button:hover {
+  color: #fff;
+  background-color: maroon;
+}
+
+button.main-button-icon {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  border-radius: 25px;
+  padding: 13px 25px;
+  background-color: maroon;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button.main-button-icon i {
+  margin-left: 5px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+button.main-button-icon:hover i {
+  padding-left: 5px;
+}
+
+
+
 /*==============================================
 05. ABOUT ME
 ================================================*/
@@ -498,7 +622,6 @@ a#logo {
 .counter-icon {
   font-size: 30px;
   margin-bottom: 10px;
-  opacity: 0.75;
 }
 .facts-list .item:hover {
   background:#fff;
@@ -513,131 +636,6 @@ a#logo {
   font-weight:700;
   line-height:1;
   margin-bottom:10px;
-}
-
-/*==============================================
-06. SERVICES BLOCK CSS
-================================================*/
-.title-block {
-  margin-bottom: 40px;
-}
-.title-block span {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-.services-list .item {
-  background-color: rgba(250,250,250,0.25);
-  border-radius: 10px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.service-icon {
-  display:block;
-  margin: 0 auto 0;
-  font-size: 64px;
-}
-.service-box {
-  font-size:15px;
-  padding:40px 20px;
-  height:100%;
-}
-.services-list .item:hover {
-  background-color: #fff;
-  color: #1e1e1e;
-}
-.service-box h3 {
-  font-size:22px;
-  font-weight:700;
-  text-transform: capitalize;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-.service-box p:last-child {
-  margin:0;
-}
-.owl-carousel .owl-dots .owl-dot {
-  border-radius: 3px;
-}
-.owl-dots {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    margin-top: 50px
-}
-
-.owl-carousel .owl-dots .owl-dot {
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background: rgba(255, 255, 255, .2)
-}
-
-.owl-carousel .owl-dots .owl-dot:focus {
-    outline: none
-}
-
-.owl-carousel .owl-dots .owl-dot.active {
-    background: #fff
-}
-
-/*==============================================
-07. WORK BLOCK CSS
-================================================*/
-.gallery-section {
-  text-align: center;
-}
-.portfolio-item img {
-  max-width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 9;
-  border-radius: 10px;
-}
-.portfolio-item .thumb-inner {
-  position: absolute;
-  z-index: 99;
-  bottom: 0;
-  text-align: left;
-  padding: 20px;
-  background-color: rgba(250,250,250,0.25);
-  width: 100%;
-  height: 60px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.portfolio-item .thumb-inner h4 {
-  margin-bottom: 0;
-  font-size: 16px;
-  margin-top: 0px;
-}
-.portfolio-item .thumb-inner p {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  margin-bottom: 0px;
-}
-.portfolio-item:hover .thumb-inner p {
-  position: relative;
-  opacity: 1;
-  visibility: visible;
-  color: #4a4a4a;
-}
-.portfolio-item:hover .thumb-inner {
-  border-radius: 10px;
-  height: 100%;
-  background-color: rgba(250,250,250,0.9)
-}
-.portfolio-item:hover .thumb-inner h4 {
-   margin-top: 30%;
-  color: #1e1e1e;
-  margin-bottom: 20px;
 }
 
 /*==============================================
@@ -768,210 +766,3 @@ textarea.form-control {
 .contact-row i.fa-envelope {
   font-size: 25px;
 }
-
-/*==============================================
-09. TESTIMONOALS BLOCK CSS
-================================================*/
-.testimonials-section .item {
-  background-color: rgba(250,250,250,0.25);
-  padding: 40px;
-  border-radius: 10px;
-}
-.testimonials-section .item img {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto;
-}
-.testimonials-section .item h4 {
-  margin-top: 40px;
-  font-size: 22px;
-  text-transform: capitalize;
-  font-weight: 700;
-}
-.testimonials-section .item p {
-  font-size: 17px;
-  font-style: italic;
-}
-
-/*==============================================
-10. SKILLS BLOCK CSS
-================================================*/
-.skills-row {
-  margin-top: 80px;
-}
-.skill-item {
-  border-bottom: 1px solid rgba(250,250,250,0.1);
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-}
-.last-skill {
-  border-bottom: none;
-}
-.skills-row span {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #fff;
-  color: #1e1e1e;
-  border-radius: 50%;
-  font-size: 16px;
-  font-weight: 700;
-  left: 0;
-  top: -21px;
-  position: absolute;
-  z-index: 999;
-}
-.skills-row h6 {
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
-  text-align: right;
-  margin-bottom: -10px;
-}
-.skill-bar {
-  width: 70%;
-  height: 6px;
-  border-radius: 3px;
-  background-color: rgba(250,250,250,0.25);
-  position: relative;
-}
-.filled-bar {
-  position: absolute;
-  z-index: 99;
-  width: 64%;
-  height: 6px;
-  background-color: #fff;
-  border-radius: 3px;
-}
-.filled-bar-2 {
-  position: absolute;
-  z-index: 99;
-  width: 82%;
-  height: 6px;
-  background-color: #fff;
-  border-radius: 3px;
-}
-
-a.main-stroked-button {
-  font-size: 13px;
-  border-radius: 25px;
-  padding: 11px 25px;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-a.main-stroked-button:hover {
-  background-color: #fff;
-  color: #5fb759;
-}
-
-a.main-filled-button {
-  font-size: 13px;
-  border-radius: 25px;
-  padding: 13px 25px;
-  background-color: #fff;
-  text-transform: uppercase;
-  color: #5fb759;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-a.main-filled-button:hover {
-  color: #fff;
-  background-color: #5fb759;
-}
-
-a.main-button-icon {
-  font-size: 13px;
-  border-radius: 25px;
-  padding: 13px 25px;
-  background-color: #5fb759;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-a.main-button-icon i {
-  margin-left: 5px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -o-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-a.main-button-icon:hover i {
-  padding-left: 5px;
-}
-
-button.main-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-  font-size: 13px;
-  border-radius: 25px;
-  padding: 10px 25px;
-  background-color: #fff;
-  text-transform: uppercase;
-  color: #5fb759;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-button.main-button:hover {
-  color: #fff;
-  background-color: #5fb759;
-}
-
-button.main-button-icon {
-  border: none;
-  outline: none;
-  font-size: 13px;
-  border-radius: 25px;
-  padding: 13px 25px;
-  background-color: #5fb759;
-  text-transform: uppercase;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-button.main-button-icon i {
-  margin-left: 5px;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -o-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
-
-button.main-button-icon:hover i {
-  padding-left: 5px;
-}
-

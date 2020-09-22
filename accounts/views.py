@@ -24,7 +24,7 @@ def home(request):
     g=[]
    # table=[]
     #print(type(table))
-    table = student_tymtable.objects.filter(specialization=request.user.userprofileinfo.specialization,class_grp=request.user.userprofileinfo.class_grp)
+    table = student_tymtable.objects.filter(specialization=request.user.userprofileinfo.specialization,class_grp=request.user.userprofileinfo.class_Group)
     for t in table:
         t1=teacher_timetable.objects.filter(name=t.First_lech_teacher,day=t.day)
         a.append(t1)
@@ -40,8 +40,7 @@ def home(request):
         f.append(t6)
         t7 = teacher_timetable.objects.filter(name=t.sev_lech_teacher,day=t.day)
         g.append(t7)
-
-
+    print(a)
     context = {
         'roll': items[x].rollnumber,
         'course': items[x].specialization,

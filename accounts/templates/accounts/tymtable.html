@@ -1,9 +1,17 @@
 {%load static%}
 
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="navbar-nav">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<head>
+  <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="navbar-nav">
         {# Django Home Link / Admin Link / Register Link#}
         <a class="navbar-brand" href="{% url 'accounts:index' %}">DJANGO</a>
         <a class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
@@ -11,81 +19,252 @@
 
         {# Some logic on what to display for last item#}
         {% if user.is_authenticated %}
-          <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+        <a class="nav-link" href="{% url 'logout' %}">Logout</a>
         {% else %}
-          <a class="nav-link" href="{% url 'accounts:user_login' %}">Login</a>
+        <a class="nav-link" href="{% url 'accounts:user_login' %}">Login</a>
         {% endif %}
-      </div>
-    </nav>
+    </div>
+</nav> -->
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.min.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
 
 
 
-   <div class="container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">
-                        Timetable
-                    </h2>
+  <link rel="stylesheet" type="text/css" href="css/fullpage.min.css">
 
-                    {{user.get_username}}
-                </div>
-                <div id="no-more-tables">
-                     <div class="table-responsive">
-                        <table class="col-sm-12 table table-bordered table-striped table- cf " id="dataTable" width="100%" cellspacing="0">
-                            <thead class="cf">
-                                <tr>
-                                    <th>      </th>
-                                    <th>1</th><th>      </th>
-                                    <th>2</th><th>      </th>
-                                    <th>Break</th><th>      </th>
-                                    <th>3</th><th>      </th>
-                                    <th>4</th><th>      </th>
-                                    <th>Lunch</th><th>      </th>
-                                    <th>5</th><th>      </th>
-                                    <th>6</th><th>      </th>
-                                    <th>7</th><th>   </th>>
-                                </tr>
-                                <tr>
-                                    <th>      </th>
-                                    <th>9:30 - 10:15</th><th>      </th>
-                                    <th>10:30 - 11:15</th><th>      </th>
-                                    <th>   </th><th>      </th>
-                                    <th>11:45 - 12:30</th><th>      </th>
-                                    <th>12:45 - 1:30</th><th>      </th>
-                                    <th>1:30 - 2:15</th><th>      </th>
-                                    <th>2:15 - 3:00</th><th>      </th>
-                                    <th>3:15 - 4:00</th><th>      </th>
-                                    <th>4:15 - 5:00</th><th>   </th>
-                                </tr>
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
 
-                                {% for i in all_teacher %}
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/templatemo-style.css">
+
+  <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
 
 
-                                <tr>
-                                    <th> {{i.day}}     </th>
-                                    <th> <a href="{{i.First_link}}">{{i.First_lech}}</a>  </th><th>   </th>
-                                    <th> <a href="{{i.sec_link}}">{{i.sec_lech}} </a>  </th><th>   </th>
-                                    <th>   </th><th>   </th>
-                                    <th> <a href="{{i.third_link}}">{{i.third_lech}}</a>  </th><th>   </th>
-                                    <th><a href="{{i.fourth_link}}"> {{i.fourth_lech}} </a></th><th>   </th>
-                                    <th>   </th><th>   </th>
-                                    <th><a href="{{i.fifth_link}}"> {{i.fifth_lech}} </a>    </th><th>   </th>
-                                    <th> <a href="{{i.sixth_link}}">{{i.sixth_lech}} </a>    </th><th>   </th>
-                                    <th><a href="{{i.sev_link}}"> {{i.sev_lech}}  </a>     </th>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
+    .topnav {
+      overflow: hidden;
+      background-color: maroon;
+    }
 
-                                        <th><a class="btn btn-sm btn-success" href="{%url 'accounts:update' id=i.id%}">Update</a></th>
-                                        <th><a class="btn btn-sm btn-danger" href="{%url 'accounts:delete' id=i.id %}">Delete</a> </th>
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
-                                </tr>
-                                <tr> </tr>
+    .topnav a:hover {
+      background-color: white;
+      color: maroon;
+    }
 
-                                {% endfor %}
-                            </thead>
-                        </table>
-                     </div>
+    .topnav .icon {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child) {
+        display: none;
+      }
+
+      .topnav a.icon {
+        float: left;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive {
+        position: relative;
+      }
+
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <header class="header">
+        <nav class="navbar navbar-brand navbar-expand-lg fixed-top py-3">
+            <div class="container">
+                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+
+                <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="navbar-brand" href="{% url 'accounts:index' %}">Home</a></li>
+                        <li class="nav-item"><a class="navbar-brand" href="">Attendance Report</a></li>
+                        <li class="nav-item"> {% if user.is_authenticated %}
+                            <a class="navbar-brand" href="{% url 'logout' %}">Logout</a>
+                            {% else %}
+                            <a class="nav-link" href="{% url 'accounts:user_login' %}"> Login</a>
+                            {% endif %}</li>
+                            <li class="nav-item"><a class="navbar-brand" href="">Hi {{user.get_username}}</a></li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+    </header> -->
+  <div class="topnav" id="myTopnav">
+    <a href="{% url 'accounts:index' %}">Home</a>
+    <a href="">Attendance Report</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Log Out</a>
+    {% else %}
+    <a href="{% url 'accounts:user_login' %}"> Login</a>
+    {% endif %}
+    <a href="">Hi {{user.get_username}}</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <br><br><br><br><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center" style="font-family: Georgia, 'Times New Roman', Times, serif; color: maroon;">
+          My Timetable
+        </h1>
+
+      </div>
+      <br><br>
+      <div id="no-more-tables">
+        <div class="table-responsive">
+          <table class="col-sm-12 table table-bordered table-striped table- cf " id="dataTable" width="100%"
+            cellspacing="0">
+            <thead class="cf">
+              <tr style="background-color: maroon; color: white;">
+                <th>Days</th>
+                <th>1</th>
+                <th> </th>
+                <th>2</th>
+                <th> </th>
+                <th>Break</th>
+                <th> </th>
+                <th>3</th>
+                <th> </th>
+                <th>4</th>
+                <th> </th>
+                <th>Lunch</th>
+                <th> </th>
+                <th>5</th>
+                <th> </th>
+                <th>6</th>
+                <th> </th>
+                <th>7</th>
+              </tr>
+              <tr style="background-color: maroon; color: white;">
+                <th> </th>
+                <th>9:30 - 10:15</th>
+                <th> </th>
+                <th>10:30 - 11:15</th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th>11:45 - 12:30</th>
+                <th> </th>
+                <th>12:45 - 1:30</th>
+                <th> </th>
+                <th>1:30 - 2:15</th>
+                <th> </th>
+                <th>2:15 - 3:00</th>
+                <th> </th>
+                <th>3:15 - 4:00</th>
+                <th> </th>
+                <th>4:15 - 5:00</th>
+              </tr>
+
+              {% for i in all_teacher %}
+
+
+              <tr style="color: maroon;">
+                <th> {{i.day}} </th>
+                <th> <a style="color: maroon;" href="{{i.First_link}}">{{i.First_lecture}}</a> </th>
+                <th> </th>
+                <th> <a style="color: maroon;" href="{{i.second_link}}">{{i.second_lecture}} </a> </th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th> <a style="color: maroon;" href="{{i.third_link}}">{{i.third_lecture}}</a> </th>
+                <th> </th>
+                <th><a style="color: maroon;" href="{{i.fourth_link}}"> {{i.fourth_lecture}} </a></th>
+                <th> </th>
+                <th> </th>
+                <th> </th>
+                <th><a style="color: maroon;" href="{{i.fifth_link}}"> {{i.fifth_lecture}} </a> </th>
+                <th> </th>
+                <th> <a style="color: maroon;" href="{{i.sixth_link}}">{{i.sixth_lecture}} </a> </th>
+                <th> </th>
+                <th><a style="color: maroon;" href="{{i.seventh_link}}"> {{i.seventh_lecture}} </a> </th>
+
+
+                <th><a class="btn btn-sm btn-success" href="{%url 'accounts:update' id=i.id%}">Update</a></th>
+                <th><a class="btn btn-sm btn-danger" href="{%url 'accounts:delete' id=i.id %}">Delete</a> </th>
+
+              </tr>
+              <tr> </tr>
+
+              {% endfor %}
+            </thead>
+          </table>
         </div>
+      </div>
     </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/fullpage.min.js"></script>
+
+  <script src="js/scrolloverflow.js"></script>
+
+  <script src="js/owl.carousel.min.js"></script>
+
+  <script src="js/jquery.inview.min.js"></script>
+
+  <script src="js/form.js"></script>
+
+  <script src="js/custom.js"></script>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+</body>

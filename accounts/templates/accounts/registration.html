@@ -1,17 +1,16 @@
-
-{% load static %}
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+<!-- {% load static %} -->
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <div class="container">
-    <div class="jumbotron">
-      {% if registered %}
+    <div class="jumbotron"> -->
+<!-- {% if registered %}
         <h1>Thank you for registering!</h1>
       {% else %}
-        <h1>Register Here</h1>
-        <h3>Just fill out the form.</h3>
+        <h1>Register Here</h1> -->
+<!-- <h3>Just fill out the form.</h3> -->
 
-        <form method="POST"> 
+<!-- <form method="POST">
           {% csrf_token %}
           <div class="register">
                 {{ user_form.as_p }}
@@ -24,6 +23,242 @@
 
     </div>
 
+  </div> -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+    integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+  <title>Register</title>
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .AppFormRight {
+      /* min-height: 110vh; */
+      background-image: linear-gradient(to right top, #000000, #270b11, #460914, #640210, #800000);
+      ;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  {% if registered %}
+  <h1>Thank you for registering!</h1>
+  {% else %}
+  <h1 style="color: white;">Register Here</h1>
+
+  <br><br>
+  <div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+      <form method="POST" class="col-md-9">
+        {% csrf_token %}
+        <div class="AppForm shadow-lg">
+          <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+              <div class="AppFormLeft">
+
+                <br>
+                <h1 style="color: maroon;">Register</h1>
+                <div class="form-group position-relative mb-4">
+                  <!-- <input type="text"
+                                          class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                          id="username" placeholder="Username"> -->
+                  {{user_form.username.label}} {{user_form.username}}
+                </div>
+                <div class="form-group position-relative mb-4">
+                  <!-- <input type="email"
+                                          class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                          id="username" placeholder="Email"> -->
+                  {{user_form.email.label}} {{user_form.email}}
+                </div>
+                <div class="form-group position-relative mb-4">
+                  <!-- <input type="password"
+                                          class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                          id="password" placeholder="Password"> -->
+                  {{user_form.password.label}} {{user_form.password}}
+
+                </div>
+                <div class="form-group position-relative mb-4">
+                  <!-- <input type="password"
+                                        class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                        id="password" placeholder="Password"> -->
+                  {{user_form.rollnumber.label}} {{user_form.rollnumber}}
+                </div>
+                <!-- <div class="form-group position-relative mb-4">
+                                      <div class="container">
+                                          <select id="select-state" placeholder="Pick a Course">
+                                              <option value="">Select a Course...</option>
+                                              <option value="1">1CO1</option>
+                                              <option value="2">1CO2</option>
+                                              <option value="3">2CO1</option>
+                                              <option value="4">2CO2</option>
+                                              <option value="5">3CO1</option>
+                                              <option value="6">3CO2</option>
+                                              <option value="7">4CO1</option>
+                                              <option value="8">4CO2</option>
+  
+                                              <option value="9">IT1</option>
+                                              <option value="10">IT2</option>
+                                              <option value="11">IT3</option>
+                                              <option value="12">IT4</option>
+  
+                                              <option value="13">ME1</option>
+                                              <option value="14">ME2</option>
+                                              <option value="15">ME3</option>
+                                              <option value="16">ME4</option>
+  
+                                              <option value="17">ECE1</option>
+                                              <option value="18">ECE2</option>
+                                              <option value="19">ECE3</option>
+                                              <option value="20">ECE4</option>
+  
+                                              <option value="21">EE1</option>
+                                              <option value="22">EE2</option>
+                                              <option value="23">EE3</option>
+                                              <option value="24">EE4</option>
+  
+                                              <option value="25">BCA1</option>
+                                              <option value="26">BCA2</option>
+                                              <option value="27">BCA3</option>
+                                              <option value="28">BCA4</option>
+  
+                                              <option value="29">MCA1</option>
+                                              <option value="30">MCA2</option>
+                                              <option value="31">MCA3</option>
+                                              <option value="32">MCA4</option>
+  
+                                              <option value="33">BBA1</option>
+                                              <option value="34">BBA2</option>
+                                              <option value="35">BBA3</option>
+                                              <option value="36">BBA4</option>
+  
+                                              <option value="37">MBA1</option>
+                                              <option value="38">MBA2</option>
+                                              <option value="39">MBA3</option>
+                                              <option value="40">MBA4</option>
+                                          </select>
+                                      </div>
+                                  </div> -->
+                <div class="form-group position-relative mb-4">
+                  <!-- <input type="password"
+                                        class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                        id="password" placeholder="Password"> -->
+                  {{user_form.specialization.label}} {{user_form.specialization}}
+                  <p style="text-align: center;">(eg. 1co1,bba1,mba1,mca1,bca1)</p>
+                  <!-- <div class="form-group position-relative mb-4">
+                    <div class="container">
+                      <select id="select-state" placeholder="Pick a Course">
+                        <option value="">Select a Course...</option>
+                        <option value="1">1CO1</option>
+                        <option value="2">1CO2</option>
+                        <option value="3">2CO1</option>
+                        <option value="4">2CO2</option>
+                        <option value="5">3CO1</option>
+                        <option value="6">3CO2</option>
+                        <option value="7">4CO1</option>
+                        <option value="8">4CO2</option>
+
+                        <option value="9">IT1</option>
+                        <option value="10">IT2</option>
+                        <option value="11">IT3</option>
+                        <option value="12">IT4</option>
+
+                        <option value="13">ME1</option>
+                        <option value="14">ME2</option>
+                        <option value="15">ME3</option>
+                        <option value="16">ME4</option>
+
+                        <option value="17">ECE1</option>
+                        <option value="18">ECE2</option>
+                        <option value="19">ECE3</option>
+                        <option value="20">ECE4</option>
+
+                        <option value="21">EE1</option>
+                        <option value="22">EE2</option>
+                        <option value="23">EE3</option>
+                        <option value="24">EE4</option>
+
+                        <option value="25">BCA1</option>
+                        <option value="26">BCA2</option>
+                        <option value="27">BCA3</option>
+                        <option value="28">BCA4</option>
+
+                        <option value="29">MCA1</option>
+                        <option value="30">MCA2</option>
+                        <option value="31">MCA3</option>
+                        <option value="32">MCA4</option>
+
+                        <option value="33">BBA1</option>
+                        <option value="34">BBA2</option>
+                        <option value="35">BBA3</option>
+                        <option value="36">BBA4</option>
+
+                        <option value="37">MBA1</option>
+                        <option value="38">MBA2</option>
+                        <option value="39">MBA3</option>
+                        <option value="40">MBA4</option>
+                      </select>
+                    </div>
+                  </div> -->
+                </div>
+                <div class="form-group position-relative mb-4">
+                  <!-- <input type="password"
+                                      class="form-control border-top-0 border-right-0 border-left-0 rounded-0 shadow-none"
+                                      id="password" placeholder="Password"> -->
+                  {{user_form.class_Group.label}} {{user_form.class_Group}}
+                </div>
+                <button class="btn btn-success btn-block shadow border-0 py-2 text-uppercase ">
+                  <a href="signin.html" style="color:white">Register</a>
+                </button>
+
+              </div>
+
+            </div>
+            <div class="col-md-6">
+              <div
+                class="AppFormRight position-relative d-flex justify-content-center flex-column align-items-center text-center p-5 text-white">
+                <h2 class="position-relative px-4 pb-3 mb-4">Attendance Made Easy!</h2>
+                <p>It's so important to understand your good attendance ups your chances of graduating.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+      {% endif %}
+    </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js"
+    integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      $('select').selectize({
+        sortField: 'text'
+      });
+    });
+  </script>
+</body>
 
+</html>
