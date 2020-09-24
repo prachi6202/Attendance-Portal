@@ -23,7 +23,7 @@ class teacher_name(models.Model):
 class UserProfileInfo(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     specialization = models.CharField(max_length=10)
-    rollnumber = models.CharField(max_length=10)
+    rollnumber = models.IntegerField()
     class_Group=models.CharField(max_length=10,choices=Group,default='1')
 
     def __str__(self):
@@ -82,4 +82,3 @@ class teacher_timetable(models.Model):
                                                    str(self.third_link),str(self.fourth_link),
                                                    str(self.fifth_link),str(self.sixth_link),
                                                    str(self.seventh_link))
-

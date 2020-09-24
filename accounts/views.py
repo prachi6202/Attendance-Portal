@@ -13,7 +13,8 @@ def home(request):
     items = UserProfileInfo.objects.all()
     user = request.user
     # if user:
-    x = int(user.id)-18
+    # x = int(user.id)
+    # print("x",x)
     all_teacher=[]
     a1=[]
     b1=[]
@@ -500,8 +501,8 @@ def home(request):
 
     #print(a)
     context = {
-        'roll': items[x].rollnumber,
-        'course': items[x].specialization,
+        # 'roll': items[x].rollnumber,
+        # 'course': items[x].specialization,
         'table':table,
         'a1': a1,
         'a2': a2,
