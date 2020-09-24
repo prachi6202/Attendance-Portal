@@ -77,5 +77,9 @@ class teacher_timetable(models.Model):
     seventh_link=models.CharField(max_length=50, null=True,blank=True)
 
     def __str__(self):
-        return '{} {}'.format(str(self.name),str(self.day))
+        return '{} {} {} {} {} {} {} {} {}'.format(str(self.name),str(self.day),
+                                                   str(self.First_link),str(self.second_link),
+                                                   str(self.third_link),str(self.fourth_link),
+                                                   str(self.fifth_link),str(self.sixth_link),
+                                                   str(self.seventh_link))
 

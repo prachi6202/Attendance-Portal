@@ -17,6 +17,7 @@ urlpatterns=[
     path('about/',views.about,name='about'),
     path('user_login/',views.user_login,name='user_login'),
     path('logout/',views.user_logout,name='logout'),
+    path('c_tymtable/',views.c_tymtable,name='c_tymtable'),
 ]
 if settings.DEBUG:
    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
