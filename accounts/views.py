@@ -58,20 +58,34 @@ def home(request):
     g4 = []
     g5 = []
     g6 = []
-
-    table = student_tymtable.objects.filter(specialization=request.user.userprofileinfo.specialization,class_grp=request.user.userprofileinfo.class_Group)
+    name1 = []
+    name3 = []
+    nayak = []
+    name2 = []
+    name5 = []
+    name4 = []
+    name6 = []
+    table = student_tymtable.objects.filter(specialization=request.user.userprofileinfo.specialization,
+                                            class_grp=request.user.userprofileinfo.class_Group)
+    for t in table:
+        nayak.append(t.First_lech_teacher)
+        name1.append(t.sec_lech_teacher)
+        name3.append(t.fourth_lech_teacher)
+        name2.append(t.third_lech_teacher)
+        name4.append(t.fifth_lech_teacher)
+        name5.append(t.sixth_lech_teacher)
+        name6.append(t.sev_lech_teacher)
     # code for 1st lecture of every day
-    name=student_tymtable.objects.values('First_lech_teacher')
-    cats={item['First_lech_teacher'] for item in name}
-    print(cats)
-    k1=[]
-    kx=[]
-    n1=[]
-    n2=[]
-    n3=[]
-    n4=[]
-    for cat in cats:
-        x1=student_tymtable.objects.filter(First_lech_teacher=cat,day='Monday')
+    # cats={item['First_lech_teacher'] for item in nayak}
+    # print(cats)
+    k1 = []
+    kx = []
+    n1 = []
+    n2 = []
+    n3 = []
+    n4 = []
+    for cat in nayak:
+        x1 = student_tymtable.objects.filter(First_lech_teacher=cat, day='Monday')
         for k in x1:
             k1.append(k.First_lech_teacher)
             print(k1)
@@ -91,23 +105,22 @@ def home(request):
         for k6 in x6:
             n4.append(k6.First_lech_teacher)
 
-
     for q1 in k1:
-        t1=teacher_timetable.objects.filter(name=q1,day='Monday')
+        t1 = teacher_timetable.objects.filter(name=q1, day='Monday')
         print(t1)
         for s1 in t1:
-            l1=s1.First_link
+            l1 = s1.First_link
             print(l1)
             a1.append(l1)
     for q in kx:
         t2 = teacher_timetable.objects.filter(name=q, day='Tuesday')
         for s2 in t2:
-            l2=s2.First_link
+            l2 = s2.First_link
             a2.append(l2)
     for q in n1:
         t3 = teacher_timetable.objects.filter(name=q, day='Wednesday')
         for s3 in t3:
-            l3=s3.First_link
+            l3 = s3.First_link
             a3.append(l3)
     for q in n2:
         t4 = teacher_timetable.objects.filter(name=q, day='Thursday')
@@ -126,16 +139,13 @@ def home(request):
             a6.append(l6)
     # code for 2nd lecture of every day
 
-    name1 = student_tymtable.objects.values('sec_lech_teacher')
-    cats1 = {item['sec_lech_teacher'] for item in name1}
-    print(cats)
-    n5=[]
-    n6=[]
-    n7=[]
-    n8=[]
-    n9=[]
-    n10=[]
-    for cat in cats1:
+    n5 = []
+    n6 = []
+    n7 = []
+    n8 = []
+    n9 = []
+    n10 = []
+    for cat in name1:
         y1 = student_tymtable.objects.filter(sec_lech_teacher=cat, day='Monday')
         for k in y1:
             n5.append(k.sec_lech_teacher)
@@ -191,16 +201,14 @@ def home(request):
             b6.append(l6)
             # code for 3rd lecture of every day
 
-    name2 = student_tymtable.objects.values('third_lech_teacher')
-    cats2 = {item['third_lech_teacher'] for item in name2}
-    cp1=[]
-    cp2=[]
-    cp3=[]
-    cp4=[]
-    cp5=[]
-    cp6=[]
-    print(cats)
-    for cat in cats2:
+    cp1 = []
+    cp2 = []
+    cp3 = []
+    cp4 = []
+    cp5 = []
+    cp6 = []
+
+    for cat in name2:
         u1 = student_tymtable.objects.filter(third_lech_teacher=cat, day='Monday')
         for k in u1:
             cp1.append(k.third_lech_teacher)
@@ -250,18 +258,15 @@ def home(request):
         for s6 in t36:
             l6 = s6.third_link
             c6.append(l6)
-                # code for 4th lecture of every day
+            # code for 4th lecture of every day
 
-    name3 = student_tymtable.objects.values('fourth_lech_teacher')
-    cats3 = {item['fourth_lech_teacher'] for item in name3}
-    print(cats)
-    p1=[]
-    p2=[]
-    p3=[]
-    p4=[]
-    p5=[]
-    p6=[]
-    for cat in cats3:
+    p1 = []
+    p2 = []
+    p3 = []
+    p4 = []
+    p5 = []
+    p6 = []
+    for cat in name3:
         u7 = student_tymtable.objects.filter(fourth_lech_teacher=cat, day='Monday')
         for k in u7:
             p1.append(k.fourth_lech_teacher)
@@ -314,16 +319,14 @@ def home(request):
 
     # code for 5th lecture of every day
 
-    name4 = student_tymtable.objects.values('fifth_lech_teacher')
-    cats4 = {item['fifth_lech_teacher'] for item in name4}
-    m1=[]
-    m2=[]
-    m3=[]
-    m4=[]
-    m5=[]
-    m6=[]
-    print(cats)
-    for cat in cats4:
+    m1 = []
+    m2 = []
+    m3 = []
+    m4 = []
+    m5 = []
+    m6 = []
+
+    for cat in name4:
         v1 = student_tymtable.objects.filter(fifth_lech_teacher=cat, day='Monday')
         for k in v1:
             m1.append(k.fifth_lech_teacher)
@@ -376,16 +379,13 @@ def home(request):
 
             # code for 6th lecture of every day
 
-    name5 = student_tymtable.objects.values('third_lech_teacher')
-    cats5 = {item['third_lech_teacher'] for item in name5}
-    print(cats)
-    m7=[]
-    m8=[]
-    m9=[]
-    m10=[]
-    m11=[]
-    m12=[]
-    for cat in cats5:
+    m7 = []
+    m8 = []
+    m9 = []
+    m10 = []
+    m11 = []
+    m12 = []
+    for cat in name5:
         v7 = student_tymtable.objects.filter(sixth_lech_teacher=cat, day='Monday')
         for k in v7:
             m7.append(k.sixth_lech_teacher)
@@ -435,18 +435,15 @@ def home(request):
         for s6 in t66:
             l6 = s6.sixth_link
             f6.append(l6)
-                # code for 7th lecture of every day
+            # code for 7th lecture of every day
 
-    name6 = student_tymtable.objects.values('sev_lech_teacher')
-    cats6 = {item['sev_lech_teacher'] for item in name6}
-    print(cats)
-    p11=[]
-    p22=[]
-    p33=[]
-    p44=[]
-    p55=[]
-    p66=[]
-    for cat in cats3:
+    p11 = []
+    p22 = []
+    p33 = []
+    p44 = []
+    p55 = []
+    p66 = []
+    for cat in name6:
         j7 = student_tymtable.objects.filter(sev_lech_teacher=cat, day='Monday')
         for k in j7:
             p11.append(k.sev_lech_teacher)
@@ -496,7 +493,6 @@ def home(request):
         for s6 in t76:
             l6 = s6.seventh_link
             g6.append(l6)
-
     #print(t1)
 
     #print(a)

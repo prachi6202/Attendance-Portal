@@ -188,41 +188,41 @@ https://templatemo.com/tm-528-elegance
                                 <tr style="background-color: maroon; color: white;">
                                     <th> Days </th>
                                     <th>1</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>2</th>
-                                    <!-- <th> </th> -->
-                                    <!-- <th>Break</th> -->
-                                    <!-- <th> </th> -->
+                                    <th> </th>
+                                    <th>Break</th>
+                                    <th> </th>
                                     <th>3</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>4</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>Lunch</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>5</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>6</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>7</th>
                                 </tr>
                                 <tr style="background-color: maroon; color: white;">
                                     <th> </th>
                                     <th>9:30 - 10:15</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>10:30 - 11:15</th>
-                                    <!-- <th> </th> -->
-                                    <!-- <th> </th> -->
-                                    <!-- <th> </th> -->
+                                    <th> </th>
+                                    <th> </th>
+                                    <th> </th>
                                     <th>11:45 - 12:30</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>12:45 - 1:30</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>1:30 - 2:15</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>2:15 - 3:00</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>3:15 - 4:00</th>
-                                    <!-- <th> </th> -->
+                                    <th> </th>
                                     <th>4:15 - 5:00</th>
                                 </tr>
 
@@ -233,364 +233,355 @@ https://templatemo.com/tm-528-elegance
                                     <th> {{i.day}}</th>
 
                                     {% ifequal 'Monday' i.day %}
-                                    {%for z1 in a1 %}
+
                                     <th><a style="color: maroon;" href="{{a1.0}}">{{i.First_lech}}
                                             {{i.First_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
+                                    <th></th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Tuesday' i.day %}
-                                     {%for z2 in a2 %}
-                                    <th><a style="color: maroon;" href="{{z2.0}}">{{i.First_lech}}
+
+                                    <th><a style="color: maroon;" href="{{a2.0}}">{{i.First_lech}}
                                             {{i.First_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in a3 %}
-                                    <th><a style="color: maroon;" href="{{z3.0}}">{{i.First_lech}}
+
+                                    <th><a style="color: maroon;" href="{{a3.0}}">{{i.First_lech}}
                                             {{i.First_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in a4 %}
-                                    <th><a style="color: maroon;" href="{{z4.0}}">{{i.First_lech}}
+
+                                    <th><a style="color: maroon;" href="{{a4.0}}">{{i.First_lech}}
                                             {{i.First_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Friday' i.day %}
-                                    {%for z5 in a5 %}
-                                    <th><a style="color: maroon;" href="{{z5.0}}">{{i.First_lech}}
+
+                                    <th><a style="color: maroon;" href="{{a5.0}}">{{i.First_lech}}
                                             {{i.First_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in a6 %}
-                                    <th><a style="color: maroon;" href="{{z6.0}}">{{i.First_lech}}
+
+                                    <th><a style="color: maroon;" href="{{a6.0}}">{{i.First_lech}}
                                             {{i.First_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
 
                                     {% ifequal 'Monday' i.day %}
-                                    {%for z1 in b1 %}
-                                    <th><a style="color: maroon;" href="{{z1}}">{{i.sec_lech}}
+
+                                    <th><a style="color: maroon;" href="{{b1.0}}">{{i.sec_lech}}
                                             {{i.sec_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
+                                    <th> </th>
+
                                     {%endifequal %}
 
 
                                     {% ifequal 'Tuesday' i.day %}
-                                    {%for z2 in b2 %}
-                                    <th><a style="color: maroon;" href="{{z2}}">{{i.sec_lech}}
-                                            {{i.sec_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{b2.0}}">{{i.sec_lech}}
+                                         {{i.sec_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in b3 %}
-                                    <th><a style="color: maroon;" href="{{z3}}">{{i.sec_lech}}
+
+                                    <th><a style="color: maroon;" href="{{b3.0}}">{{i.sec_lech}}
                                             {{i.sec_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in b4 %}
-                                    <th><a style="color: maroon;" href="{{z4}}">{{i.sec_lech}}
+
+                                    <th><a style="color: maroon;" href="{{b4.0}}">{{i.sec_lech}}
                                             {{i.sec_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Friday' i.day %}
-                                    {%for z5 in b5 %}
-                                    <th><a style="color: maroon;" href="{{z5}}">{{i.sec_lech}}
+
+                                    <th><a style="color: maroon;" href="{{b5.0}}">{{i.sec_lech}}
                                             {{i.sec_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in b6 %}
-                                    <th><a style="color: maroon;" href="{{z6}}">{{i.sec_lech}}
+
+                                    <th><a style="color: maroon;" href="{{b6.0}}">{{i.sec_lech}}
                                             {{i.sec_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
                                     {%endifequal %}
 
-
-
-                                    <!-- <th> </th> -->
-
-
-                                    <!-- <th> </th> -->
-                                    <!-- <th> -->
-
-                                    {% ifequal 'Monday' i.day %}
-                                    {%for z1 in c1 %}
-                                    <th><a style="color: maroon;" href="{{z1}}">{{i.third_lech}}
-                                            {{i.third_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Tuesday' i.day %}
-                                    {%for z2 in c2 %}
-                                    <th><a style="color: maroon;" href="{{z2}}">{{i.third_lech}}
-                                            {{i.third_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in c3 %}
-                                    <th><a style="color: maroon;" href="{{z3}}">{{i.third_lech}}
-                                            {{i.third_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in c4 %}
-                                    <th><a style="color: maroon;" href="{{z4}}">{{i.third_lech}}
-                                            {{i.third_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Friday' i.day %}
-                                    {%for z5 in c5 %}
-                                    <th><a style="color: maroon;" href="{{z5}}">{{i.third_lech}}
-                                            {{i.third_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in c6 %}
-                                    <th><a style="color: maroon;" href="{{z6}}">{{i.third_lech}}
-                                            {{i.third_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-
-
-                                    <!-- <th> </th> -->
-                                    {% ifequal 'Monday' i.day %}
-                                    {%for z1 in d1 %}
-                                    <th><a style="color: maroon;" href="{{z1}}">{{i.fourth_lech}}
-                                        {{i.fourth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Tuesday' i.day %}
-                                    {%for z2 in d2 %}
-                                    <th><a style="color: maroon;" href="{{z2}}">{{i.fourth_lech}}
-                                        {{i.fourth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in d3 %}
-                                    <th><a style="color: maroon;" href="{{z3}}">{{i.fourth_lech}}
-                                        {{i.fourth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in d4 %}
-                                    <th><a style="color: maroon;" href="{{z4}}">{{i.fourth_lech}}
-                                        {{i.fourth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Friday' i.day %}
-                                    {%for z5 in d5 %}
-                                    <th><a style="color: maroon;" href="{{z5}}">{{i.fourth_lech}}
-                                        {{i.fourth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
-
-                                    {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in d6 %}
-                                    <th><a style="color: maroon;" href="{{z6}}">{{i.fourth_lech}}
-                                        {{i.fourth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
-                                    {%endifequal %}
 
 
                                     <th> </th>
 
 
-                                    <!-- <th> </th> -->
-                                    <!-- <th> </th> -->
-                                    {% ifequal 'Monday' i.day %}
-                                    {%for z1 in e1 %}
+                                    <th> </th>
 
-                                    <th><a style="color: maroon;" href="{{z1}}">{{i.fifth_lech}}
-                                            {{i.fifth_lech_teacher}} </a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
+
+                                    {% ifequal 'Monday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{c1.0}}">{{i.third_lech}}
+                                            {{i.third_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Tuesday' i.day %}
-                                    {%for z2 in e2 %}
-                                    <th><a style="color: maroon;" href="{{z2}}">{{i.fifth_lech}}
-                                            {{i.fifth_lech_teacher}} </a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{c2.0}}">{{i.third_lech}}
+                                            {{i.third_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in e3 %}
-                                    <th><a style="color: maroon;" href="{{z3}}">{{i.fifth_lech}}
-                                            {{i.fifth_lech_teacher}} </a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{c3.0}}">{{i.third_lech}}
+                                            {{i.third_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in e4 %}
-                                    <th><a style="color: maroon;" href="{{z4}}">{{i.fifth_lech}}
-                                            {{i.fifth_lech_teacher}} </a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{c4.0}}">{{i.third_lech}}
+                                            {{i.third_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Friday' i.day %}
-                                    {%for z5 in e5 %}
-                                    <th><a style="color: maroon;" href="{{z5}}">{{i.fifth_lech}}
-                                            {{i.fifth_lech_teacher}} </a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{c5.0}}">{{i.third_lech}}
+                                            {{i.third_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in e6 %}
-                                    <th><a style="color: maroon;" href="{{z6}}">{{i.fifth_lech}}
-                                            {{i.fifth_lech_teacher}} </a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{c6.0}}">{{i.third_lech}}
+                                            {{i.third_lech_teacher}}</a> </th>
+                                    <th> </th>
                                     {%endifequal %}
 
 
-                                    <!-- <th> </th> -->
+
+
                                     {% ifequal 'Monday' i.day %}
-                                    {%for z1 in f1 %}
-                                    <th><a style="color: maroon;" href="{{z1}}">{{i.sixth_lech}}
-                                            {{i.sixth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
+
+                                    <th><a style="color: maroon;" href="{{d1.0}}">{{i.fourth_lech}}
+                                        {{i.fourth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Tuesday' i.day %}
-                                    {%for z2 in f2 %}
-                                    <th><a style="color: maroon;" href="{{z2}}">{{i.sixth_lech}}
-                                            {{i.sixth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{d2.0}}">{{i.fourth_lech}}
+                                        {{i.fourth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in f3 %}
 
-                                    <th><a style="color: maroon;" href="{{z3}}">{{i.sixth_lech}}
-                                            {{i.sixth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th><a style="color: maroon;" href="{{d3.0}}">{{i.fourth_lech}}
+                                        {{i.fourth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in f4 %}
-                                    <th><a style="color: maroon;" href="{{z4}}">{{i.sixth_lech}}
-                                            {{i.sixth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{d4.0}}">{{i.fourth_lech}}
+                                        {{i.fourth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Friday' i.day %}
-                                    {%for z5 in f5 %}
-                                    <th><a style="color: maroon;" href="{{z5}}">{{i.sixth_lech}}
-                                            {{i.sixth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{d5.0}}">{{i.fourth_lech}}
+                                        {{i.fourth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in f6 %}
-                                    <th><a style="color: maroon;" href="{{z6}}">{{i.sixth_lech}}
-                                            {{i.sixth_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{d6.0}}">{{i.fourth_lech}}
+                                        {{i.fourth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
-
-
-                                    <!-- <th> </th> -->
+                                    <th> </th>
+                                    <th> </th>
                                     {% ifequal 'Monday' i.day %}
-                                    {%for z1 in g1 %}
-                                    <th><a style="color: maroon;" href="{{z1}}">{{i.sev_lech}}
-                                            {{i.sev_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {%endfor%}
+
+
+                                    <th><a style="color: maroon;" href="{{e1.0}}">{{i.fifth_lech}}
+                                            {{i.fifth_lech_teacher}} </a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Tuesday' i.day %}
-                                    {%for z2 in g2 %}
-                                    <th><a style="color: maroon;" href="{{z2}}">{{i.sev_lech}}
-                                            {{i.sev_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{e2.0}}">{{i.fifth_lech}}
+                                            {{i.fifth_lech_teacher}} </a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Wednesday' i.day %}
-                                    {%for z3 in g3 %}
-                                    <th><a style="color: maroon;" href="{{z3}}">{{i.sev_lech}}
-                                            {{i.sev_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{e3.0}}">{{i.fifth_lech}}
+                                            {{i.fifth_lech_teacher}} </a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Thursday' i.day %}
-                                    {%for z4 in g4 %}
-                                    <th><a style="color: maroon;" href="{{z4}}">{{i.sev_lech}}
-                                            {{i.sev_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{e4.0}}">{{i.fifth_lech}}
+                                            {{i.fifth_lech_teacher}} </a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Friday' i.day %}
-                                    {%for z5 in g5 %}
-                                    <th><a style="color: maroon;" href="{{z5}}">{{i.sev_lech}}
-                                            {{i.sev_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+
+                                    <th><a style="color: maroon;" href="{{e5.0}}">{{i.fifth_lech}}
+                                            {{i.fifth_lech_teacher}} </a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
                                     {% ifequal 'Saturday' i.day %}
-                                    {%for z6 in g6 %}
-                                    <th><a style="color: maroon;" href="{{z6}}">{{i.sev_lech}}
+
+                                    <th><a style="color: maroon;" href="{{e6.0}}">{{i.fifth_lech}}
+                                            {{i.fifth_lech_teacher}} </a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+                                    {% ifequal 'Monday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{f1.0}}">{{i.sixth_lech}}
+                                            {{i.sixth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Tuesday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{f2.0}}">{{i.sixth_lech}}
+                                            {{i.sixth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Wednesday' i.day %}
+
+
+                                    <th><a style="color: maroon;" href="{{f3.0}}">{{i.sixth_lech}}
+                                            {{i.sixth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Thursday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{f4.0}}">{{i.sixth_lech}}
+                                            {{i.sixth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Friday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{f5.0}}">{{i.sixth_lech}}
+                                            {{i.sixth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Saturday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{f6.0}}">{{i.sixth_lech}}
+                                            {{i.sixth_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+
+
+                                    {% ifequal 'Monday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{g1.0}}">{{i.sev_lech}}
                                             {{i.sev_lech_teacher}}</a> </th>
-                                    <!-- <th> </th> -->
-                                    {% endfor %}
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Tuesday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{g2.0}}">{{i.sev_lech}}
+                                            {{i.sev_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Wednesday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{g3.0}}">{{i.sev_lech}}
+                                            {{i.sev_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Thursday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{g4.0}}">{{i.sev_lech}}
+                                            {{i.sev_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Friday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{g5.0}}">{{i.sev_lech}}
+                                            {{i.sev_lech_teacher}}</a> </th>
+                                    <th> </th>
+
+                                    {%endifequal %}
+
+                                    {% ifequal 'Saturday' i.day %}
+
+                                    <th><a style="color: maroon;" href="{{g6.0}}">{{i.sev_lech}}
+                                            {{i.sev_lech_teacher}}</a> </th>
+                                    <th> </th>
+
                                     {%endifequal %}
 
 
@@ -598,8 +589,6 @@ https://templatemo.com/tm-528-elegance
 
 
                                 </tr>
-
-                                <tr> </tr>
 
                                 {% endfor %}
 
