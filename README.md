@@ -1,6 +1,6 @@
 # Attendance-Portal
 
-This website will provides the platform to the students for joining the online classes through google meet and also provides a platform for teachers to make their time table and will generate the attendance report automatically by some clicks.
+This website will provide the platform to the students for joining the online classes through google meet and also provides a platform for teachers to make their timetable and will generate the attendance report automatically by some clicks.
 
 
 # Brief Description: 
