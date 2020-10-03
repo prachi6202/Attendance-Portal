@@ -59,7 +59,7 @@ class student_tymtable(models.Model):
 class teacher_timetable(models.Model):
     id=models.AutoField(primary_key=True)
     name=models.CharField(max_length=50,null=True,blank=True)
-    user=models.ForeignKey(User,on_delete=models.CASCADE,default='1')
+    email=models.EmailField(max_length=20,default='')
     day=models.CharField(max_length=50, choices=Days, default='Monday')
     First_lecture=models.CharField(max_length=50, null=True,blank=True)
     second_lecture=models.CharField(max_length=50, null=True,blank=True)

@@ -29,9 +29,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 if DEBUG:
-    EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend' #during devlopment only
-EMAIL_HOST='localhost'
-EMAIL_PORT=25
+    #EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend' #during devlopment only
+    EMAIL_HOST='smtp.gmail.com'
+    EMAIL_HOST_USER='portal.attendance@gmail.com'
+    EMAIL_HOST_PASSWORD='att@1234'
+    EMAIL_USE_TLS=True
+    EMAIL_USE_SSL=False
+    EMAIL_PORT=587
+
 
 # Application definition
 

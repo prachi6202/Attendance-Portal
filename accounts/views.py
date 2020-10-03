@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .forms import UserForm,UserProfileInfoForm,teacher_timetableform
 from .models import *
+from django.conf import settings
+from django.core.mail import send_mail
 # Extra Imports for the Login and Logout Capabilities
 from django.contrib.auth import authenticate, login as django_login ,logout as django_logout
 from django.http import HttpResponseRedirect, HttpResponse
@@ -625,7 +627,7 @@ def user_login(request):
 
 
 def tymtable(request):
-    all_teacher=teacher_timetable.objects.filter(user=request.user)
+    all_teacher=teacher_timetable.objects.filter(email=request.user.email)
     print(all_teacher)
     return render(request, 'accounts/tymtable.html',{'all_teacher': all_teacher})
 
@@ -662,3 +664,20 @@ def c_tymtable(request):
             return HttpResponseRedirect(reverse('tymtable'))
     context={'form':form}
     return render(request,'accounts/about.html',context)
+
+def feed(request):
+    if request.method=='POST':
+        name=request.POST['name']
+        email=request.POST['email']
+        msg=request.POST['message']
+        d_email=settings.EMAIL_HOST_USER
+        msg_b=msg+'' \
+                  'regards'+ name
+        send_mail(
+            'Regarding Website Feedback',
+            msg_b,
+            [email],
+            [d_email],
+            fail_silently=False,
+        )
+        return render(request,'accounts/index')

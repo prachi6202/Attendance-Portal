@@ -18,7 +18,7 @@ from django.urls import path,include
 from accounts import views
 from django.conf.urls.static import static
 from django.conf import settings
-from django.contrib.auth import views as auth_view
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -31,6 +31,6 @@ urlpatterns = [
     path('logout/', views.user_logout, name='logout'),
     path('index/',views.index,name='index'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('accounts/user_login/',auth_view.LoginView.as_view(template_name='accounts/login.html')),
+    path('accounts/login/',auth_views.LoginView.as_view(template_name='accounts/login.html')),
 
 ]
